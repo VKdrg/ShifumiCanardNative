@@ -1,33 +1,73 @@
-:root{
-    font-family: 'Josefin Sans';
-    font-size: 62.5%;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700');
+
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+:root {
+  font-family: 'Josefin Sans', system-ui, sans-serif;
+  font-size: 62.5%;
 }
 
-h1{
+h2 {
   font-family: "Josefin Slab";
   font-weight: 700;
   font-size: 5.6rem;
   text-align: center;
 }
 
-h2 {
+p {
   font-weight: 300;
   text-align: center;
   font-size: 2rem;
 }
 
-body{
+body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background-color: black;
+  color: whitesmoke;
 }
 
-body .light{
-    background-color: whitesmoke;
-    color: black;
+/* body .light {
+  background-color: whitesmoke;
+  color: black;
 }
 
 body .dark {
-    background-color: black;
-    color: whitesmoke;
+  background-color: black;
+  color: whitesmoke;
+} */
+
+header {
+  display: flex;
+  width: 100%;
+  /* justify-content: space-between; */
+  padding-inline: 9.6rem;
+  
+  img{
+    height: 2.4rem;
+  }
+}
+
+#headerImages{
+  /* flex-direction: row; */
+  width: 100%;
+  justify-content: space-between;
+}
+
+#computer, #player {
+  display: flex;
+  height: 50%;
+}
+
+#results {
+  /* display: none; */
+}
+
+header {
+  button{
+    background-color: none;
+    border: none;
+  }
 }

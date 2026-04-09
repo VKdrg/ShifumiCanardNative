@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/canard.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.9.1/tsparticles.confetti.bundle.min.js"></script>
     <link rel="stylesheet" href="./style.css">
-    <script type="module" src="./main.js" defer></script>
+    <script src="./main.js" defer></script>
     <title>{ Shifumi Canard }</title>
 </head>
 
-<body class="light">
+<body>
 
     <header>
         <div id="headerImages">
@@ -20,28 +21,30 @@
             <img src="./assets/canard.png" alt="icone de canard" />
             <img src="./assets/canard.png" alt="icone de canard" />
             <img src="./assets/canard.png" alt="icone de canard" />
-            <img src="./assets/canard-orange.png" alt="icone de canard" />
+            <button id="surprise"><img src="./assets/canard-orange.png" alt="icone de canard" /></button>
             <img src="./assets/canard.png" alt="icone de canard" />
             <img src="./assets/canard.png" alt="icone de canard" />
         </div>
-        <i class="fa-solid fa-circle-half-stroke"></i>
+        <button><i class="fa-solid fa-circle-half-stroke"></i></button>
     </header>
 
     <main>
-        <section id="game"></section>
+        <section id="game">
+            <div id="computer">
+                <p>Computer played :</p>
+                <i class="fa-solid" id="computerGame"></i>
+                <p>You played :</p>
+                <i class="fa-solid" id="userGame"></i>
+            </div>
+            <div id="player">
+                <button value="0" id="button-rock"><i class="fa-solid fa-hand-fist"></i></button>
+                <button value="1" id="button-paper"><i class="fa-solid fa-hand"></i></button>
+                <button value="2" id="button-scissors"><i class="fa-solid fa-hand-peace"></i></button>
+            </div>
+        </section>
         <section id="results">
-            <div>
-                <h2>You Won !</h2>
-                <p>Big canard for you.</p>
-            </div>
-            <div>
-                <h2>You Lost !</h2>
-                <p>No canard for you.</p>
-            </div>
-            <div>
-                <h2>It's a draw !</h2>
-                <p>Try again to see if you can win.</p>
-            </div>
+            <h2 id="resultH2"></h2>
+            <p id="resultP"></p>
         </section>
     </main>
 
