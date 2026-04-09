@@ -34,6 +34,9 @@ header {
   width: 100%;
   justify-content: space-between;
   padding-inline: clamp(1.6rem, -0.5053rem + 8.4211vw, 9.6rem);
+  height: 4rem;
+  align-items: center;
+  margin-bottom: 4rem;
   
   img{
     height: 2.4rem;
@@ -47,6 +50,9 @@ header {
 
 #results {
   display: none;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-top: 4rem;
 }
 
 i {
@@ -60,7 +66,7 @@ button {
   align-items: center;
   border: none;
   border-radius: 8px;
-  background-color: #404040;
+  background-color: #808080;
 }
 
 button:hover {
@@ -68,23 +74,27 @@ button:hover {
 }
 
 button:active{
-  background-color: #808080;
+  background-color: #353535;
 }
 
 #game{
   flex-direction: column;
-  gap: 4rem;
+
 }
 
 #player {
   width: 100%;
-  padding: 4rem;
+  padding-inline: clamp(4rem, -3.3684rem + 29.4737vw, 32rem);
   justify-content: space-around;
+  margin-bottom: 4rem;
 }
 
 #computer {
   flex-direction: column;
   gap: 1.6rem;
+  align-items: center;
+  padding-block: 3.2rem;
+  margin-block: 4rem;
 
   #rows {
     display: flex;

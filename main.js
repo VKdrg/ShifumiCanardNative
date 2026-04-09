@@ -9,11 +9,13 @@
             let playerScore = 0
             let scores = document.getElementById('scores')
             const results = document.getElementById('results')
+            const btnReset = document.getElementById('btnReset')
             
             // Player part
             const button1 = document.getElementById('button-rock')
             const button2 = document.getElementById('button-paper')
             const button3 = document.getElementById('button-scissors')
+
             // Results
             const resultH2 = document.getElementById('resultH2')
             const resultP= document.getElementById('resultP')
@@ -112,4 +114,10 @@
     })
     button3.addEventListener('click', () => { 
         Game('scissors')
+    })
+    
+    btnReset.addEventListener('click', () => {
+        computerScore = 0
+        playerScore = 0
+        scores.textContent = `Scores : Computer: ${computerScore} - Player: ${playerScore}`
     })
