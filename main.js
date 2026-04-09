@@ -8,6 +8,7 @@
             let computerScore = 0
             let playerScore = 0
             let scores = document.getElementById('scores')
+            scores.textContent = `Scores : Computer: ${computerScore} - Player: ${playerScore}`
             const results = document.getElementById('results')
             const btnReset = document.getElementById('btnReset')
             
@@ -90,16 +91,25 @@
                 resultH2.textContent = 'You won !'
                 resultP.textContent = 'Big canard for you.'
                 results.style.display = 'flex'
+                button1.setAttribute('disabled', '')
+                button2.setAttribute('disabled', '')
+                button3.setAttribute('disabled', '')
             }
             else if (playerScore < computerScore) {
                 resultH2.textContent = 'You Lost !'
                 resultP.textContent = 'No canard for you.'
                 results.style.display = 'flex'
+                button1.setAttribute('disabled', '')
+                button2.setAttribute('disabled', '')
+                button3.setAttribute('disabled', '')
             }
             else {
                 resultH2.textContent = 'It\'s a draw!'
                 resultP.textContent = 'Try again to see if you can win.'
                 results.style.display = 'flex'
+                button1.setAttribute('disabled', '')
+                button2.setAttribute('disabled', '')
+                button3.setAttribute('disabled', '')
             }
         }
         
@@ -120,5 +130,8 @@
         computerScore = 0
         playerScore = 0
         results.style.display = 'none'
+        button1.removeAttribute('disabled')
+        button2.removeAttribute('disabled')
+        button3.removeAttribute('disabled')
         scores.textContent = `Scores : Computer: ${computerScore} - Player: ${playerScore}`
     })
