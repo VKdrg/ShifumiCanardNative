@@ -29,31 +29,15 @@ body {
   color: whitesmoke;
 }
 
-/* body .light {
-  background-color: whitesmoke;
-  color: black;
-}
-
-body .dark {
-  background-color: black;
-  color: whitesmoke;
-} */
-
 header {
   display: flex;
   width: 100%;
-  /* justify-content: space-between; */
-  padding-inline: 9.6rem;
+  justify-content: space-between;
+  padding-inline: clamp(1.6rem, -0.5053rem + 8.4211vw, 9.6rem);
   
   img{
     height: 2.4rem;
   }
-}
-
-#headerImages{
-  /* flex-direction: row; */
-  width: 100%;
-  justify-content: space-between;
 }
 
 #computer, #player {
@@ -62,12 +46,48 @@ header {
 }
 
 #results {
-  /* display: none; */
+  display: none;
 }
 
-header {
-  button{
-    background-color: none;
-    border: none;
+i {
+  font-size: 2.4rem;
+}
+
+button {
+  height: 4.8rem;
+  width: 4.8rem;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 8px;
+  background-color: #404040;
+}
+
+button:hover {
+  background-color: #606060;
+}
+
+button:active{
+  background-color: #808080;
+}
+
+#game{
+  flex-direction: column;
+  gap: 4rem;
+}
+
+#player {
+  width: 100%;
+  padding: 4rem;
+  justify-content: space-around;
+}
+
+#computer {
+  flex-direction: column;
+  gap: 1.6rem;
+
+  #rows {
+    display: flex;
+    flex-direction: row;
   }
 }

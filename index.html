@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/canard.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.9.1/tsparticles.confetti.bundle.min.js"></script>
     <link rel="stylesheet" href="./style.css">
     <script src="./main.js" defer></script>
     <title>{ Shifumi Canard }</title>
@@ -15,32 +14,36 @@
 <body>
 
     <header>
-        <div id="headerImages">
-            <img src="./assets/canard.png" alt="icone de canard" />
-            <img src="./assets/canard.png" alt="icone de canard" />
-            <img src="./assets/canard.png" alt="icone de canard" />
-            <img src="./assets/canard.png" alt="icone de canard" />
-            <img src="./assets/canard.png" alt="icone de canard" />
-            <button id="surprise"><img src="./assets/canard-orange.png" alt="icone de canard" /></button>
-            <img src="./assets/canard.png" alt="icone de canard" />
-            <img src="./assets/canard.png" alt="icone de canard" />
-        </div>
-        <button><i class="fa-solid fa-circle-half-stroke"></i></button>
+        <img src="./assets/canard.png" alt="icone de canard" />
+        <img src="./assets/canard.png" alt="icone de canard" />
+        <img src="./assets/canard.png" alt="icone de canard" />
+        <img src="./assets/canard.png" alt="icone de canard" />
+        <img src="./assets/canard.png" alt="icone de canard" />
+        <img class="surprise" src="./assets/canard-orange.png" alt="icone de canard" />
+        <img src="./assets/canard.png" alt="icone de canard" />
+        <img src="./assets/canard.png" alt="icone de canard" />
     </header>
 
     <main>
         <section id="game">
+            <p>The game is in five rounds, highest score wins.<br>Good luck, fucker !</p>
             <div id="computer">
-                <p>Computer played :</p>
-                <i class="fa-solid" id="computerGame"></i>
-                <p>You played :</p>
-                <i class="fa-solid" id="userGame"></i>
+                <div id="rows">
+                    <p>Computer played :</p>
+                    <i class="fa-solid" id="computerGame"></i>
+                </div>
+                <div id="rows">
+                    <p>You played :</p>
+                    <i class="fa-solid" id="userGame"></i>
+                </div>
             </div>
             <div id="player">
                 <button value="0" id="button-rock"><i class="fa-solid fa-hand-fist"></i></button>
                 <button value="1" id="button-paper"><i class="fa-solid fa-hand"></i></button>
                 <button value="2" id="button-scissors"><i class="fa-solid fa-hand-peace"></i></button>
             </div>
+            <p id="scores"></p>
+            <p id="roundResult"></p>
         </section>
         <section id="results">
             <h2 id="resultH2"></h2>
@@ -49,6 +52,48 @@
     </main>
 
     <footer></footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.9.1/tsparticles.confetti.bundle.min.js"></script>
+    <script>
+        const surpriseBtn = document.querySelector('.surprise')
+        surpriseBtn.addEventListener('click', () => {
+            const defaults = {
+                spread: 360,
+                ticks: 100,
+                gravity: 0,
+                decay: 0.94,
+                startVelocity: 40,
+                // origin: x: , y:
+            };
+
+            function shoot() {
+                confetti({
+                    ...defaults,
+                    particleCount: 30,
+                    scalar: 1.2,
+                    shapes: ['circle', 'star'],
+                    colors: ['#ff9600'],
+                });
+
+                confetti({
+                    ...defaults,
+                    particleCount: 60,
+                    scalar: 2,
+                    shapes: ['emoji'],
+                    shapeOptions: {
+                        emoji: {
+                            value: ['🐤'],
+                        },
+                    },
+                });
+            }
+
+            setTimeout(shoot, 0);
+            setTimeout(shoot, 100);
+            setTimeout(shoot, 200);
+        })
+    </script>
 
 </body>
 
