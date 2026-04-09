@@ -119,5 +119,6 @@
     btnReset.addEventListener('click', () => {
         computerScore = 0
         playerScore = 0
+        results.style.display = 'none'
         scores.textContent = `Scores : Computer: ${computerScore} - Player: ${playerScore}`
     })
