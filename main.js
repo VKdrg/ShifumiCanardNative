@@ -68,7 +68,7 @@
             userGame.classList.add('fa-hand-peace')
             userGame.classList.remove('fa-hand', 'fa-hand-fist')
         }
-      
+
         console.log(`Computer : ${computerTurn} - Player : ${userTurn}`)
         
         if ((computerTurn == 'rock' && userTurn == 'paper' )|| (computerTurn == 'paper' && userTurn == 'scissors') || (computerTurn == 'scissors' && userTurn == 'rock')) {
@@ -82,7 +82,7 @@
         }
         else {
             localStorage.setItem("computerScore", computerScore++)
-            roundResult.textContent = 'Computer wins the round ! Cheh !'
+            roundResult.textContent = 'Computer wins the round !'
         }
 
         if (playerScore === 5 || computerScore === 5) {
