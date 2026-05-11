@@ -116,10 +116,13 @@ button:active {
   background-color: black;
   color: whitesmoke;
   width: fit-content;
+  border: 1px solid whitesmoke;
+  border-radius: 32px;
+  padding: 0.8rem 3.2rem;
 }
 
 #btnReset:hover,
 #btnReset:active {
-  background-color: black;
-  text-decoration: underline;
+  background-color: #ffffff33;
+  /* text-decoration: underline; */
 }
